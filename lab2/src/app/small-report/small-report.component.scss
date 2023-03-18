@@ -1,0 +1,14 @@
+:host {
+    box-shadow: 8px 8px 24px -10px rgb(66 68 90);
+    border-radius: 8px;
+    min-width: 300px;
+    min-height: 250px;
+    padding: 30px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    flex: 1;
+}
