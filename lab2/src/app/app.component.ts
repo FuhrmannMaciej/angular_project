@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lab2';
-  smallReportRevenueIcon = '../../assets/icons/money-bag.png';
-  smallReportRevenueValue = 1000;
-  smallReportRevenueColor = 'green';
-  smallReportRevenueLabel = 'Total Revenue';
+  TotalRevenueIcon = '../../assets/icons/money-bag.png';
+  TotalRevenueValue = 1000;
+  TotalRevenueColor = 'green';
+  TotalRevenueLabel = 'Total Revenue';
+  RevenueIcon = '../../assets/icons/cart.png';
+  RevenueValue = 1000;
+  RevenueColor = 'purple';
+  RevenueLabel = 'Revenue';
 }

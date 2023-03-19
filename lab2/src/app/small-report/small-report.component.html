@@ -1,6 +1,10 @@
 <img src={{icon}}>
-<h4>{{value}}</h4>
-<p>{{label}}</p>
+<div class="textContent">
+    <h4>${{value}}</h4>
+    <p>{{label}}</p>
+</div>
 <div class="menu">
-    <button class="menuButton" (click)="onMenu($event)"></button>
+    <button class="menuButton" (click)="onMenu($event)">
+        <div class="dots">...</div>
+    </button>
 </div>
