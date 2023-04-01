@@ -1,4 +1,13 @@
 <h2>Podgląd formatowania</h2>
 <div class="preview-elements">
-    <div>Pole tekstowe <input [ngStyle]="css" [style.color]="css.color" [style.background]="css.background" value="Tekst pola tekstowego">
-    </div>
+    <div>Pole tekstowe <input [ngStyle]="css" [style.color]="css.color" [style.background]="css.background"
+            [style.border]="css.border" [style.box-shadow]="css['box-shadow']" value="Tekst pola tekstowego">
+        <div>Przycisk <button [ngStyle]="css" [style.color]="css.color" [style.background]="css.background"
+                [style.border]="css.border" [style.box-shadow]="css['box-shadow']">Tekst przycisku</button>
+            <div>Element blokowy
+                <div class="preview-block-element" [ngStyle]="css" [style.color]="css.color"
+                    [style.background]="css.background" [style.border]="css.border"
+                    [style.box-shadow]="css['box-shadow']">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
+                    cum aliquid reprehenderit tenetur reiciendis sit provident rem illum perferendis facere, corrupti
+                    ullam harum alias porro! Ab temporibus natus atque officia.</div>
+            </div>
