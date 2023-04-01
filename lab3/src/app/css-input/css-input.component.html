@@ -1,0 +1,9 @@
+<h2>Formatowanie</h2>
+<div class="inputs">
+    <div>Kolor tekstu <input type="text" [(ngModel)]="css.color"></div>
+    <div>Kolor tła <input type="text" [(ngModel)]="css.background"></div>
+    <div>Kolor ramki <input type="text" [(ngModel)]="css.border"></div>
+    <div>Cień <input type="text" [(ngModel)]="css['box-shadow']"></div>
+    <div><button (click)="onGenerateCSS()">Wygeneruj CSS</button>
+    </div>
+</div>

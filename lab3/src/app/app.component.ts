@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CSS } from './models/css.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lab3';
+  css: CSS = {
+    color: undefined,
+    background: undefined,
+    border: undefined,
+    'box-shadow': undefined
+  };
+
+  onCssChange(css: CSS): void {
+    this.css = css;
+  }
 }
