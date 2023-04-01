@@ -1,2 +1,5 @@
-<app-css-input (cssInputEvent)="onCssChange($event)" ></app-css-input>
-<app-css-preview [css]="css"></app-css-preview>
+<div class="container">
+  <app-css-input (cssInputEvent)="onCssChange($event)"></app-css-input>
+  <app-css-preview [css]="css"></app-css-preview>
+</div>
+<app-css-code-generated [css]="css"></app-css-code-generated>

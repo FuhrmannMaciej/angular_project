@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CSS } from '../models/css.model';
+
 
 @Component({
   selector: 'app-css-code-generated',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./css-code-generated.component.scss']
 })
 export class CssCodeGeneratedComponent {
-
+  @Input() css: CSS = {
+    color: undefined,
+    border: undefined,
+    'box-shadow': undefined,
+    background: undefined
+  }
 }
