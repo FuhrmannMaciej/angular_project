@@ -1,0 +1,57 @@
+<div [formGroup]="invoice">
+    <div formGroupName="issuePersonData">
+        <h4>Bill to: </h4>
+        <div>
+            Name: <input type="text" formControlName="name">
+        </div>
+        <div>
+            City: <input type="text" formControlName="city">
+        </div>
+        <div>Address: <input type="text" formControlName="address"></div>
+        <div>Zip Code: <input type="text" formControlName="zipCode"></div>
+        <div>NIP: <input type="text" formControlName="nip"></div>
+        <div>Bank account number: <input type="text" formControlName="bankAccount"></div>
+    </div>
+    <div formGroupName="orderPersonData">
+        <h4>Ship to: </h4>
+        <div>
+            Name: <input type="text" formControlName="name">
+        </div>
+        <div>
+            City: <input type="text" formControlName="city">
+        </div>
+        <div>Address: <input type="text" formControlName="address"></div>
+        <div>Zip Code: <input type="text" formControlName="zipCode"></div>
+        <div>NIP: <input type="text" formControlName="nip"></div>
+    </div>
+    <div>
+        <button (click)="onAddPosition()">Add position</button>
+        <div *ngFor="let item of invoice.controls.invoiceTable.controls" style="display: flex;">
+            <div>
+                Name: <input type="text" [formControl]="item.controls.name">
+            </div>
+            <div>
+                Quantity: <input type="number" [formControl]="item.controls.quantity">
+            </div>
+            <div>
+                Unit: <input type="text" [formControl]="item.controls.unit">
+            </div>
+            <div>
+                Price: <input type="number" [formControl]="item.controls.price">
+            </div>
+            <div>
+                Tax: <input type="text" [formControl]="item.controls.tax">
+            </div>
+            <div>
+                Value: {{ (item.controls.price.value ?? 0) * (item.controls.quantity.value ?? 0)}}
+            </div>
+            <div>
+                Value with Tax: {{ (item.controls.price.value ?? 0) * (item.controls.quantity.value ?? 0) * (item.controls.tax.value ?? 0)}}
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3>Summary: </h3>
+
+    </div>
+</div>
